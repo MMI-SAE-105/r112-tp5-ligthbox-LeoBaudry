@@ -32,6 +32,7 @@
     z-index: 1;
     opacity: 0;
     visibility: hidden;
+
 }
 
 
@@ -42,8 +43,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(236, 154, 2, 0.534);
-    transition: opacity 1.5s ease, visibility 1.5s ease;
-    transition: background-color 2s ease; 
+    animation: backgroundColorChange 1.5s forwards; /* Animation de la couleur de fond */
 }
   
 #lightbox img {
@@ -60,5 +60,14 @@
     to {
       opacity: 1;
       transform: scale(1); 
+    }
+  }
+
+@keyframes backgroundColorChange {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: rgba(236, 154, 2, 0.534); 
     }
   }
